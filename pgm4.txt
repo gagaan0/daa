@@ -1,0 +1,58 @@
+
+4.Sort a given set of N integer element using Selection Sort technique and Compute it’staken. Run the program for different values of N and record the time taken to sort.
+
+import java.util.*;
+public class SelectionSort
+ {
+
+	int arr[]=new int[5000];
+	int i,j,k,n,tmp;
+	Scanner sc=new Scanner(System.in);
+	Random r = new Random();
+	void Read_data()
+	{
+		System.out.println("enter size of the array");
+		n=sc.nextInt();
+		System.out.println("enter array elements");
+		for(i=0;i<n;i++)
+			arr[i]=r.nextInt(n);
+		System.out.println("Unsorted Elements are");
+		for(i=0;i<n;i++)
+			   System.out.print(arr[i]+ " ");
+			System.out.print("\n"); 	
+	}
+	void Selc_sort()
+	{
+		System.out.println("Sorted Elements");
+		  for(i=0;i<n-1;i++)
+		  {
+			  j=i;
+			  for(k=j+1;k<n;k++)
+			  {
+				  if(arr[k]<arr[j])
+				    j=k;
+			  }
+			  tmp=arr[i];
+			  arr[i]=arr[j];
+			  arr[j]=tmp;
+		  }
+		  for(i=0;i<n;i++)
+		  {
+			  System.out.println(arr[i]+ " ");
+		  }
+	}
+
+	public static void main(String[] args) 
+        {
+		SelectionSort sst=new SelectionSort();
+		long start,end;
+		sst.Read_data();
+		start=System.currentTimeMillis();
+		sst.Selc_sort();
+		end=System.currentTimeMillis();
+		System.out.println("Time Taken in Sec\t" + ((end-start)/1000.0));
+	}
+
+
+
+}
