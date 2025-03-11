@@ -1,15 +1,6 @@
 AIM:
 
-2 b. Write a Java class called Customer to store their name and date_of_birth. The date_of_birth format should be dd/mm/yyyy. Write methods to read customer data as <name, dd/mm/yyyy> and display as <name, dd, mm, yyyy> using StringTokenizer class considering the delimiter character as “/”.
-
-ALGORITHM:
-
-1. Create a Java class Customer and define the required features 
-2. Read the date of birth in the prescribed format 
-3. Create a method to read the date string 
-4. Use StringTokenizer java class to tokenize the date string and print
-PROGRAM:
-
+2 b. 
 import java.util.Scanner;
 importjava.util.StringTokenizer;
 class Customer
