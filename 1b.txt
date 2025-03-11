@@ -1,6 +1,4 @@
-Write a Java program to implement the Stack using arrays. Write Push (), Pop (), and Display () methods to demonstrate its working.
 
-PROGRAM:
 
 import java.util.Scanner; //Scanner Method means to read the values from keyboard
 class Stack
