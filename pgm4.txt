@@ -1,5 +1,5 @@
 
-4.Sort a given set of N integer element using Selection Sort technique and Compute it’staken. Run the program for different values of N and record the time taken to sort.
+4.
 
 import java.util.*;
 public class SelectionSort
