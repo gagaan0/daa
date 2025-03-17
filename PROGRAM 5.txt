@@ -1,0 +1,46 @@
+// Program 5: To Implement Insortion Sort Algorithm 
+import java.util.*;
+public class InsertSort {
+	int arr[]=new int[5000];
+	int i,j,k,n,tmp;
+	Scanner sc=new Scanner(System.in);
+	Random r = new Random();
+	void Input()
+	{
+		System.out.println("enter size of the array");
+		n=sc.nextInt();
+		System.out.println("Unsorted array elements are ");
+		for(i=0;i<n;i++)
+			arr[i]=10+r.nextInt(n);
+		for(i=0;i<n;i++)
+		   System.out.print(arr[i]+ " ");
+		System.out.print("\n"); 	
+	}
+	void Insrt_sort() {
+		System.out.println("Sorted Elements");
+		  for(i=1;i<n;i++) {
+			  k=arr[i];
+			  j=i-1;
+			  while(j>=0 && arr[j]>k) {
+				  arr[j+1]=arr[j];
+				  j--;
+			  }
+			  arr[j+1]=k;
+		  }
+		  for(i=0;i<n;i++)
+		  {
+			  System.out.print(arr[i]+ " ");
+		  }
+	}
+	public static void main(String[] args) {
+		long start,end;
+		InsertSort sr=new InsertSort();
+		sr.Input();
+		start=System.currentTimeMillis();
+		sr.Insrt_sort();
+		end=System.currentTimeMillis();
+		System.out.println("\nTime Taken in Sec\t" + (end-start));
+
+	}
+
+}
